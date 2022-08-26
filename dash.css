@@ -1,0 +1,38 @@
+
+    .scroll {
+        border: none;
+        padding: 5px;
+        font: 16px/25px sans-serif;
+        width: 10in;
+        height: 4in;
+        overflow: scroll;
+        }
+        ::-webkit-scrollbar {
+        width: 12px;
+        height: 12px;
+        }
+        ::-webkit-scrollbar-track {
+        border: 1px solid yellowgreen;
+        border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+        background: rgb(38, 41, 32);
+        border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+        background: #88ba1c;
+        }
+        .flex-parent-element {
+            display: flex;
+            width: 50%;
+          }
+          
+          .flex-child-element {
+            flex: 1;
+            border: 2px solid rgba(32, 32, 32, 0.342);
+            margin: 10px;
+          }
+          
+          .flex-child-element:first-child {
+            margin-right: 20px;
+          }

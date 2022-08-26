@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='dash.css')}}">
+<style>
+table,th,
+td {
+border: 1px solid black;
+}
+</style>
+</head>
+<body>
+  <div class="flex-parent-element">
+    <div class="flex-child-element magenta">
+Insert<form action="{{ url_for('data')}}" method="post">
+  <br>
+  <label for="Fullname">ID:</label>
+  <input type="text" id="Fullname" name="nam" placeholder="Fullname">
+  <button type="submit">Insert</button>
+</form>
+<br>
+    </div>
+  <div class="flex-child-element green"><h4>Database Origin</No></h4>Number of rows:{{mydoc}}</div>
+  </div>
+  <hr>
+<p>Database 1</p>
+<div class="scroll">
+<table>
+  <tr>
+  <th>Unique ID</th>
+  <th>Origin</th>
+  <th>suspect</th>
+  </tr>
+  {% for usdatas in usdata %}
+  <tr>
+  <td>{{ usdatas['_id'] }}</td>
+  <td>{{ usdatas['origin1'] }}</td>
+  <td>{{usdatas['suspect']}}</td>
+  </tr>
+  {% endfor %}
+  </table>
+</div>
+<p>hello:{{namee}}</p>
+</body>
+</html>
